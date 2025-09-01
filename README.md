@@ -1,3 +1,4 @@
+#Note: The first eight files listed above represent the core scripts and resources required to run the project. All other files in the repository (e.g., log files, outputs, auxiliary folders) are supplementary artifacts and not essential for immediate use.
 # Research-Paper-Parser
 HPC cluster based parser for parsing Semantic Scholar research paper using filters, including keywords, dates etc. 
 This project provides a scalable tool for retrieving academic research papers from the Semantic Scholar API, designed to run on both local systems and HPC environments such as SDSC Expanse.
