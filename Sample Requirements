@@ -1,0 +1,25 @@
+These requirements are a sample only; the code might need to be changed depending on your environment, HPC, device and installed modules. 
+
+#!/bin/bash
+# Setup environment and install dependencies for Semantic Scholar Parser
+
+# 1. Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate
+
+# 2. Upgrade base packaging tools
+pip install --upgrade pip setuptools wheel
+
+# 3. Install core dependencies
+pip install requests pandas
+
+# (Optional) If you prefer requirements.txt instead:
+# pip install -r requirements.txt
+
+# 4. Verify installation
+python - <<EOF
+import requests, pandas
+print("requests:", requests.__version__, "| pandas:", pandas.__version__)
+EOF
+
+echo "✅ Environment setup complete!"
