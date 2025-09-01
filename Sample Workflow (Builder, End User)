@@ -1,0 +1,12 @@
+ssh username@login.expanse.sdsc.edu 
+#enter password 
+#enter TOTP code
+mkdir semantic-scholar-parser 
+cd semantic-scholar-parser
+python parser.py
+#enter the filters as provided by the prompts 
+#next, try running with SLURM 
+sbatch run_parser.slurm
+squeue -u username
+#view results and save thereafter (SLURM provides the complete ability to execute mutliple tasks simultaneously using HPC)
+#This is a sample worflow for both the builder and the end user. 
