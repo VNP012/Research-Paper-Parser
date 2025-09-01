@@ -1,0 +1,89 @@
+# Note: This workflow is an example. It may run as-is or require modifications depending on your HPC environment, available modules, and system setup.
+# 1. Log in to SDSC Expanse
+ssh username@login.expanse.sdsc.edu
+# Enter your password
+# Enter your TOTP code if enabled
+
+# 2. Create and enter the project directory
+mkdir semantic-scholar-parser
+cd semantic-scholar-parser
+
+# 3. Create the parser script
+nano parser.py
+# Paste the provided code for parser.py into this file
+# Save (Ctrl+O, Enter) and exit (Ctrl+X)
+
+# 4. (Optional) Upload other project files
+# keywords.txt, run_parser.slurm, combine_results.py
+
+# 5. Load required modules for Python 
+# 1. Log in to SDSC Expanse
+ssh username@login.expanse.sdsc.edu
+# Enter your password
+# Enter your TOTP code if enabled
+
+# 2. Create and enter the project directory
+mkdir semantic-scholar-parser
+cd semantic-scholar-parser
+
+# 3. Create the parser script
+nano parser.py
+# Paste the provided code for parser.py into this file
+# Save (Ctrl+O, Enter) and exit (Ctrl+X)
+
+# 4. (Optional) Upload other project files
+# keywords.txt, run_parser.slurm, combine_results.py
+
+# 5. Load required modules for Python
+# Use `module spider` to check and load the correct Python/Anaconda modules for your HPC system.
+# (Examples below are environment-specific and may differ based on your cluster.)
+module load gpu/0.17.3b
+module load anaconda3/2021.05/kfluefz
+
+# 6. Create a virtual environment
+python -m venv venv
+source venv/bin/activate
+
+# 7. Install dependencies
+pip install --upgrade pip
+pip install requests pandas
+
+# 8. Test the parser interactively
+python parser.py
+# Enter a keyword (e.g., nanotechnology) and confirm CSV is created
+
+# 9. (Optional) Batch mode with keywords.txt
+nano keywords.txt
+# Add multiple keywords, one per line
+python parser.py keywords.txt
+
+# 10. (Optional) Run at scale with SLURM
+nano run_parser.slurm
+# Paste the provided jobscript
+sbatch run_parser.slurm
+squeue -u username
+module load gpu/0.17.3b
+module load anaconda3/2021.05/kfluefz
+
+# 6. Create a virtual environment
+python -m venv venv
+source venv/bin/activate
+
+# 7. Install dependencies
+pip install --upgrade pip
+pip install requests pandas
+
+# 8. Test the parser interactively
+python parser.py
+# Enter a keyword (e.g., nanotechnology) and confirm CSV is created
+
+# 9. (Optional) Batch mode with keywords.txt
+nano keywords.txt
+# Add multiple keywords, one per line
+python parser.py keywords.txt
+
+# 10. (Optional) Run at scale with SLURM
+nano run_parser.slurm
+# Paste the provided jobscript
+sbatch run_parser.slurm
+squeue -u username
