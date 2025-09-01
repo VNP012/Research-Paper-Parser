@@ -1,0 +1,10 @@
+scp username@login.expanse.sdsc.edu:/home/username/semantic-scholar-parser/results_nanotechnology.csv ~/Downloads/ #saves to downloads
+
+(base) vivaanpatel@Vivaans-Air ~ % scp username@login.expanse.sdsc.edu:/home/username/semantic-scholar-parser/results_nanotechnology.csv ~/Downloads/ 
+
+expected inputs/outputs: 
+
+#(vpatel11@login.expanse.sdsc.edu) Password: 
+#(username@login.expanse.sdsc.edu) TOTP code for username: 
+#expected output after files are saved results_nanotechnology.csv                                                                                                                                         100% 9970   166.5KB/s   00:00    
+#base prompt (base) vivaanpatel@Vivaans-Air ~ %
